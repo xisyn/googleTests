@@ -1,24 +1,14 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class Search {
-    ChromeDriver wd;
-
-    @BeforeMethod
-    public void setUp() {
-        wd = new ChromeDriver();
-    }
-
+public class Search extends TestBase {
     @Test
-    public void searchTest() {
-        wd.get("https://google.com");
-
+    public void testSearch() {
         String fullName = "Хицунов Дмитрий Иванович";
+
+        wd.get("https://google.com");
 
         WebElement searchField = wd.findElement(By.xpath("//div/input[@title=\"Поиск\"]"));
         searchField.sendKeys(fullName);
@@ -27,10 +17,15 @@ public class Search {
         WebElement firstResult = wd.findElement(By.xpath("(//*[@class=\"st\"]/*)[1]"));
 
         Assert.assertEquals(firstResult.getText(), fullName);
-    }
 
-    @AfterMethod
-    public void tearDown() {
-        wd.quit();
+        WebElement searchBar = wd.findElement(By.name("q"));
+        String tooltipText = searchBar.getAttribute("title");
+
+        Assert.assertEquals(tooltipText, "Поиск");
+
+        WebElement logo = wd.findElement(By.id("logo"));
+        logo.click();
+
+        Assert.assertFalse(isResultPresent());
     }
 }
