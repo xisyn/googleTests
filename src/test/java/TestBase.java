@@ -1,28 +1,18 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 public class TestBase {
-    ChromeDriver wd;
+
+    protected final Page page = new Page();
 
     @BeforeSuite
     public void setUp() {
-        wd = new ChromeDriver();
+        page.init();
     }
 
     @AfterSuite
     public void tearDown() {
-        wd.quit();
+        page.stop();
     }
 
-    public boolean isResultPresent() {
-        try {
-            wd.findElement(By.className("r"));
-            return true;
-        } catch (NoSuchElementException e) {
-            return false;
-        }
-    }
 }
