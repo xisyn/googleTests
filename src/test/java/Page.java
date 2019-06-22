@@ -40,9 +40,9 @@ public class Page {
         wd.findElement(By.id("logo")).click();
     }
 
-    protected void search(String fullName) {
-        WebElement searchField = wd.findElement(By.xpath("//div/input[@title=\"Поиск\"]"));
-        searchField.sendKeys(fullName);
+    protected void search(String query) {
+        WebElement searchField = wd.findElement(By.name("q"));
+        searchField.sendKeys(query);
         searchField.submit();
     }
 }

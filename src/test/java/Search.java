@@ -1,5 +1,7 @@
-import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
 
 public class Search extends TestBase {
     @Test
@@ -7,9 +9,9 @@ public class Search extends TestBase {
         String fullName = "Хицунов Дмитрий Иванович";
         page.goToGoogle();
         page.search(fullName);
-        Assert.assertEquals(page.getFirstResult(), fullName);
-        Assert.assertEquals(page.getTooltipText(), "Поиск");
+        assertEquals(page.getFirstResult(), fullName);
+        assertEquals(page.getTooltipText(), "Поиск");
         page.clickLogo();
-        Assert.assertFalse(page.isResultPresent());
+        assertFalse(page.isResultPresent());
     }
 }
