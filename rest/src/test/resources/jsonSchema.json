@@ -97,14 +97,12 @@
                   ],
                   "properties": {
                     "width": {
-                      "type": "string",
-                      "title": "The Width Schema",
-                      "pattern": "^(.*)$"
+                      "type": "number",
+                      "title": "The Width Schema"
                     },
                     "height": {
-                      "type": "string",
-                      "title": "The Height Schema",
-                      "pattern": "^(.*)$"
+                      "type": "number",
+                      "title": "The Height Schema"
                     },
                     "src": {
                       "type": "string",
@@ -129,9 +127,8 @@
                   ],
                   "properties": {
                     "postalcode": {
-                      "type": "string",
-                      "title": "The Postalcode Schema",
-                      "pattern": "^(.*)$"
+                      "type": "number",
+                      "title": "The Postalcode Schema"
                     },
                     "addressregion": {
                       "type": "string",

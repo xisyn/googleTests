@@ -45,7 +45,7 @@ public class RestTests {
             .get("https://www.googleapis.com/customsearch/v1")
         .then()
             .assertThat()
-            .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("jsonBigSchema.json"));
+            .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("jsonSchema.json"));
     }
 
 }
