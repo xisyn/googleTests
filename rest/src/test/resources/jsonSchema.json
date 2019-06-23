@@ -1,0 +1,271 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "The Root Schema",
+    "items": {
+      "type": "array",
+      "title": "The Items Schema",
+      "items": {
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "kind",
+          "title",
+          "htmlTitle",
+          "link",
+          "displayLink",
+          "snippet",
+          "htmlSnippet",
+		  "cacheId",
+          "formattedUrl",
+          "htmlFormattedUrl",
+		  "pagemap"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string",
+            "title": "The Kind Schema",
+            "pattern": "^(.*)$"
+          },
+          "title": {
+            "type": "string",
+            "title": "The Title Schema",
+            "pattern": "^(.*)$"
+          },
+          "htmlTitle": {
+            "type": "string",
+            "title": "The Htmltitle Schema",
+            "pattern": "^(.*)$"
+          },
+          "link": {
+            "type": "string",
+            "title": "The Link Schema",
+            "pattern": "^(.*)$"
+          },
+          "displayLink": {
+            "type": "string",
+            "title": "The Displaylink Schema",
+            "pattern": "^(.*)$"
+          },
+          "snippet": {
+            "type": "string",
+            "title": "The Snippet Schema",
+            "pattern": "^(.*)$"
+          },
+          "htmlSnippet": {
+            "type": "string",
+            "title": "The Htmlsnippet Schema",
+            "pattern": "^(.*)$"
+          },
+		  "cacheId": {
+            "type": "string",
+            "title": "The Cacheid Schema",
+            "pattern": "^(.*)$"
+          },
+          "formattedUrl": {
+            "type": "string",
+            "title": "The Formattedurl Schema",
+            "pattern": "^(.*)$"
+          },
+          "htmlFormattedUrl": {
+            "type": "string",
+            "title": "The Htmlformattedurl Schema",
+            "pattern": "^(.*)$"
+          }
+        },
+		"pagemap": {
+            "type": "object",
+            "title": "The Pagemap Schema",
+            "required": [
+              "cse_thumbnail",
+              "postaladdress",
+              "metatags",
+              "organization",
+              "cse_image"
+            ],
+            "properties": {
+              "cse_thumbnail": {
+                "type": "array",
+                "title": "The Cse_thumbnail Schema",
+                "items": {
+                  "type": "object",
+                  "title": "The Items Schema",
+                  "required": [
+                    "width",
+                    "height",
+                    "src"
+                  ],
+                  "properties": {
+                    "width": {
+                      "type": "string",
+                      "title": "The Width Schema",
+                      "pattern": "^(.*)$"
+                    },
+                    "height": {
+                      "type": "string",
+                      "title": "The Height Schema",
+                      "pattern": "^(.*)$"
+                    },
+                    "src": {
+                      "type": "string",
+                      "title": "The Src Schema",
+                      "pattern": "^(.*)$"
+                    }
+                  }
+                }
+              },
+              "postaladdress": {
+                "type": "array",
+                "title": "The Postaladdress Schema",
+                "items": {
+                  "type": "object",
+                  "title": "The Items Schema",
+                  "required": [
+                    "postalcode",
+                    "addressregion",
+                    "streetaddress",
+                    "addresscountry",
+                    "addresslocality"
+                  ],
+                  "properties": {
+                    "postalcode": {
+                      "type": "string",
+                      "title": "The Postalcode Schema",
+                      "pattern": "^(.*)$"
+                    },
+                    "addressregion": {
+                      "type": "string",
+                      "title": "The Addressregion Schema",
+                      "pattern": "^(.*)$"
+                    },
+                    "streetaddress": {
+                      "type": "string",
+                      "title": "The Streetaddress Schema",
+                      "pattern": "^(.*)$"
+                    },
+                    "addresscountry": {
+                      "type": "string",
+                      "title": "The Addresscountry Schema",
+                      "pattern": "^(.*)$"
+                    },
+                    "addresslocality": {
+                      "type": "string",
+                      "title": "The Addresslocality Schema",
+                      "pattern": "^(.*)$"
+                    }
+                  }
+                }
+              },
+              "metatags": {
+                "type": "array",
+                "title": "The Metatags Schema",
+                "items": {
+                  "type": "object",
+                  "title": "The Items Schema",
+                  "required": [
+                    "viewport",
+                    "format-detection",
+                    "og:title",
+                    "og:url",
+                    "og:description",
+                    "og:image"
+                  ],
+                  "properties": {
+                    "viewport": {
+                      "type": "string",
+                      "title": "The Viewport Schema",
+                      "pattern": "^(.*)$"
+                    },
+                    "format-detection": {
+                      "type": "string",
+                      "title": "The Format-detection Schema",
+                      "pattern": "^(.*)$"
+                    },
+                    "og:title": {
+                      "type": "string",
+                      "title": "The Og:title Schema",
+                      "pattern": "^(.*)$"
+                    },
+                    "og:url": {
+                      "type": "string",
+                      "title": "The Og:url Schema",
+                      "pattern": "^(.*)$"
+                    },
+                    "og:description": {
+                      "type": "string",
+                      "title": "The Og:description Schema",
+                      "pattern": "^(.*)$"
+                    },
+                    "og:image": {
+                      "type": "string",
+                      "title": "The Og:image Schema",
+                      "pattern": "^(.*)$"
+                    }
+                  }
+                }
+              },
+              "organization": {
+                "type": "array",
+                "title": "The Organization Schema",
+                "items": {
+                  "type": "object",
+                  "title": "The Items Schema",
+                  "required": [
+                    "name",
+                    "legalname",
+                    "taxid",
+                    "foundingdate",
+                    "description"
+                  ],
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "The Name Schema",
+                      "pattern": "^(.*)$"
+                    },
+                    "legalname": {
+                      "type": "string",
+                      "title": "The Legalname Schema",
+                      "pattern": "^(.*)$"
+                    },
+                    "taxid": {
+                      "type": "string",
+                      "title": "The Taxid Schema",
+                      "pattern": "^(.*)$"
+                    },
+                    "foundingdate": {
+                      "type": "string",
+                      "title": "The Foundingdate Schema",
+                      "pattern": "^(.*)$"
+                    },
+                    "description": {
+                      "type": "string",
+                      "title": "The Description Schema",
+                      "pattern": "^(.*)$"
+                    }
+                  }
+                }
+              },
+              "cse_image": {
+                "type": "array",
+                "title": "The Cse_image Schema",
+                "items": {
+                  "type": "object",
+                  "title": "The Items Schema",
+                  "required": [
+                    "src"
+                  ],
+                  "properties": {
+                    "src": {
+                      "type": "string",
+                      "title": "The Src Schema",
+                      "pattern": "^(.*)$"
+                    }
+                  }
+                }
+              }
+            }
+          }
+      }
+    }
+}
