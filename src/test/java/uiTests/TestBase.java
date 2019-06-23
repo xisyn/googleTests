@@ -1,16 +1,18 @@
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+package uiTests;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 public class TestBase {
 
     protected final Page page = new Page();
 
-    @BeforeSuite
+    @BeforeMethod
     public void setUp() {
         page.init();
     }
 
-    @AfterSuite
+    @AfterMethod
     public void tearDown() {
         page.stop();
     }

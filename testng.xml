@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="uiTest" verbose="1" >
+    <test name="checkGoogle" >
+        <classes>
+            <class name="uiTests.Search" />
+            <class name="RestTests"></class>
+        </classes>
+    </test>
+</suite>

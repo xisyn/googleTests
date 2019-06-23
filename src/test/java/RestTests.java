@@ -1,13 +1,7 @@
-import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;
-import io.restassured.parsing.Parser;
-import io.restassured.response.Response;
-import org.hamcrest.Matcher;
-import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
@@ -32,7 +26,7 @@ public class RestTests {
         .and()
             .header("Transfer-Encoding", equalTo("chunked"))
         .and()
-            .body("items.title[0]", Matchers.equalTo("ООО \"Танк-к\", Москва (ИНН 7703228474, ОГРН 1037739437966)"));
+            .body("items.title[0]", equalTo("ООО \"Танк-к\", Москва (ИНН 7703228474, ОГРН 1037739437966)"));
     }
 
     @Test
