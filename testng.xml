@@ -4,7 +4,7 @@
     <test name="checkGoogle" >
         <classes>
             <class name="uiTests.Search" />
-            <class name="RestTests"></class>
+            <class name="RestTests"/>
         </classes>
     </test>
 </suite>

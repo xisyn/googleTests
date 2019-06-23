@@ -2,16 +2,13 @@ import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
-
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.equalTo;
 
 public class RestTests {
 
     @Test
-    public void testMethod() throws IOException, URISyntaxException {
+    public void testMethod() {
         given()
             .params("key", "AIzaSyA4juEzAjVFoyK64ZVG0D_S-96sR_HsLtg",
                 "q", "7703228474",
