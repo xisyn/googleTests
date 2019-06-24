@@ -29,14 +29,14 @@ public class RestTests {
     @Test
     public void testEmptyKey() {
         given()
-                .params("key", "",
-                        "q", "7703228474",
+            .params("key", "",
+                "q", "7703228474",
                         "cx", "009273001490562717861:hi7m1d4fgss")
-                .when()
-                .get("https://www.googleapis.com/customsearch/v1")
-                .then()
-                .assertThat()
-                .statusCode(400);
+        .when()
+            .get("https://www.googleapis.com/customsearch/v1")
+        .then()
+            .assertThat()
+            .statusCode(400);
     }
 
     @Test
