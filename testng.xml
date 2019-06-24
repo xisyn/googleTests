@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="uiTest" verbose="1" >
-    <test name="checkGoogle" >
+<suite name="uiAndApiTest" verbose="1" >
+    <test name="full" >
         <classes>
             <class name="uiTests.Search" />
             <class name="RestTests"/>

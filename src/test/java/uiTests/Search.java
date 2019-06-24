@@ -6,9 +6,9 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
 
 public class Search extends TestBase {
+    String fullName = "Хицунов Дмитрий Иванович";
     @Test
     public void testSearch() {
-        String fullName = "Хицунов Дмитрий Иванович";
         page.goToGoogle();
         page.search(fullName);
         assertEquals(page.getFirstResult(), fullName);
